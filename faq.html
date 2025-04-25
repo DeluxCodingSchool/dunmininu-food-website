@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sokoyokoto | FAQ</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fdfdfd;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        background-color: #444;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        padding: 2rem;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .faq-item {
+        background: #f0f0f0;
+        margin: 1rem 0;
+        padding: 1rem;
+        border-left: 5px solid #00704a;
+        cursor: pointer;
+      }
+
+      .faq-answer {
+        display: none;
+        margin-top: 0.5rem;
+        color: #555;
+      }
+
+      .testimonials {
+        margin-top: 3rem;
+      }
+
+      .testimonial {
+        background: #fff9e6;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid #e0c97d;
+        border-radius: 8px;
+      }
+
+      .stars {
+        color: #f5b301;
+        font-size: 1.2rem;
+      }
+
+      .rating {
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>Sokoyokoto</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="chefs.html">Chefs</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>Do you deliver?</strong>
+        <div class="faq-answer">Yes, we deliver nationwide across Nigeria.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>Are the meals fresh?</strong>
+        <div class="faq-answer">
+          Absolutely. Our chefs prepare all meals fresh every day.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>Do you have vegetarian options?</strong>
+        <div class="faq-answer">
+          Yes, we offer several plant-based Nigerian dishes.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>How do I place an order?</strong>
+        <div class="faq-answer">
+          You can order directly through our website or via WhatsApp.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>What payment options do you accept?</strong>
+        <div class="faq-answer">
+          We accept card, transfer, and mobile payment options.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>Is delivery free?</strong>
+        <div class="faq-answer">Delivery is free for orders over ₦5,000.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>Can I customize my order?</strong>
+        <div class="faq-answer">
+          Yes! You can leave special requests at checkout.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>What is the average delivery time?</strong>
+        <div class="faq-answer">
+          Delivery usually takes 30 to 60 minutes depending on location.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>Do you cater for events?</strong>
+        <div class="faq-answer">
+          Yes, we provide catering for weddings, parties, and corporate events.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleAnswer(this)">
+        <strong>How do I contact support?</strong>
+        <div class="faq-answer">
+          You can reach our support team via the contact form or WhatsApp.
+        </div>
+      </div>
+
+      <div class="testimonials">
+        <h2>Customer Testimonials</h2>
+
+        <div class="testimonial">
+          "Sokoyokoto saved my party! The Amala was perfect!" – Tunde
+        </div>
+        <div class="testimonial">
+          "Best Egusi soup I've had outside my mum's kitchen." – Chiamaka
+        </div>
+        <div class="testimonial">
+          "Delivery was fast and food was still hot!" – Ife
+        </div>
+        <div class="testimonial">
+          "Their chefs know how to cook with love." – Musa
+        </div>
+        <div class="testimonial">
+          "So glad I found Sokoyokoto. Authentic and delicious." – Funmi
+        </div>
+        <div class="testimonial">
+          "Ordered for my office, everyone loved it!" – Emeka
+        </div>
+        <div class="testimonial">
+          "The Semo and Ogbono combo hit the spot!" – Nneka
+        </div>
+        <div class="testimonial">
+          "Excellent service and tasty meals." – Aisha
+        </div>
+        <div class="testimonial">
+          "Good portion sizes and fair prices." – Bode
+        </div>
+        <div class="testimonial">
+          "I order weekly now. Highly recommend." – Adaeze
+        </div>
+
+        <div class="rating">
+          Overall Rating: <span class="stars">★★★★☆</span> 4.1 Stars
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleAnswer(element) {
+        const answer = element.querySelector(".faq-answer");
+        answer.style.display =
+          answer.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sokoyokoto | Order Now</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #fffaf0;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        background-color: #6b4226;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 2rem;
+      }
+
+      .promo {
+        background-color: #ffe4b5;
+        padding: 1rem;
+        border-left: 5px solid #ff6347;
+        margin-bottom: 2rem;
+        font-weight: bold;
+      }
+
+      form {
+        background-color: #f5f5f5;
+        padding: 2rem;
+        border-radius: 10px;
+      }
+
+      label {
+        display: block;
+        margin-top: 1rem;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.3rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .menu-builder {
+        margin-top: 2rem;
+      }
+
+      .menu-item {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+      }
+
+      .menu-item span {
+        float: right;
+        font-weight: bold;
+      }
+
+      .total {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: right;
+      }
+
+      .map {
+        margin-top: 3rem;
+      }
+
+      button {
+        background-color: #6b4226;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        margin-top: 1.5rem;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #8b5a2b;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>Sokoyokoto</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="chefs.html">Chefs</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="promo">
+        🎉 Promo: Get FREE Zobo drink on all orders above ₦5000 this weekend!
+      </div>
+
+      <h2>Place Your Order</h2>
+
+      <!-- Order Form -->
+      <form
+        action="https://formsubmit.co/talktonike2016@gmail.com"
+        method="POST"
+      >
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="address">Delivery Address</label>
+        <textarea id="address" name="address" rows="3" required></textarea>
+
+        <div class="menu-builder">
+          <h3>Select Meals</h3>
+
+          <div class="menu-item">
+            <label
+              ><input
+                type="checkbox"
+                name="meal[]"
+                value="Amala & Gbegiri (₦1500)"
+                data-price="1500"
+                class="meal-checkbox"
+              />
+              Amala & Gbegiri</label
+            >
+            <span>₦1500</span>
+          </div>
+
+          <div class="menu-item">
+            <label
+              ><input
+                type="checkbox"
+                name="meal[]"
+                value="Semo & Egusi (₦2000)"
+                data-price="2000"
+                class="meal-checkbox"
+              />
+              Semo & Egusi</label
+            >
+            <span>₦2000</span>
+          </div>
+
+          <div class="menu-item">
+            <label
+              ><input
+                type="checkbox"
+                name="meal[]"
+                value="Ofada & Ayamase (₦2200)"
+                data-price="2200"
+                class="meal-checkbox"
+              />
+              Ofada & Ayamase</label
+            >
+            <span>₦2200</span>
+          </div>
+
+          <div class="menu-item">
+            <label
+              ><input
+                type="checkbox"
+                name="meal[]"
+                value="Pounded Yam & Ogbono (₦1800)"
+                data-price="1800"
+                class="meal-checkbox"
+              />
+              Pounded Yam & Ogbono</label
+            >
+            <span>₦1800</span>
+          </div>
+          <div class="menu-item">
+            <label
+              ><input
+                type="checkbox"
+                name="meal[]"
+                value="Fried rice (₦2500)"
+                data-price="2500"
+                class="meal-checkbox"
+              />
+              Fried rice</label
+            >
+            <span>₦2500</span>
+          </div>
+          <div class="menu-item">
+            <label
+              ><input
+                type="checkbox"
+                name="meal[]"
+                value="Jollof rice (₦3000)"
+                data-price="3000"
+                class="meal-checkbox"
+              />
+              Jollof rice</label
+            >
+            <span>₦3000</span>
+          </div>
+
+          <div class="total" id="totalDisplay">Total: ₦0</div>
+        </div>
+
+        <!-- Hidden fields for form submission -->
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Order from Sokoyokoto"
+        />
+        <input type="hidden" name="_captcha" value="false" />
+
+        <button type="submit">Send Order</button>
+      </form>
+
+      <!-- Google Map Section -->
+      <div class="map">
+        <h3>Find Us</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1983.373078546248!2d3.379205814507348!3d6.524379324728563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c4b3cf6a7b7%3A0xf0bfb8a2cc5ac7c0!2sLagos!5e0!3m2!1sen!2sng!4v1615293457734!5m2!1sen!2sng"
+          width="100%"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <script>
+      // Select all checkboxes
+      const checkboxes = document.querySelectorAll(".meal-checkbox");
+      const totalDisplay = document.getElementById("totalDisplay");
+      let totalAmount = 0;
+
+      // Function to update the total price
+      function updateTotal() {
+        totalAmount = 0;
+        checkboxes.forEach((chk) => {
+          if (chk.checked) {
+            totalAmount += parseInt(chk.dataset.price);
+          }
+        });
+        totalDisplay.textContent = `Total: ₦${totalAmount}`;
+      }
+
+      // Event listener for meal selection change
+      checkboxes.forEach((chk) => chk.addEventListener("change", updateTotal));
+
+      // Call updateTotal on page load to initialize
+      updateTotal();
+    </script>
+  </body>
+</html>
